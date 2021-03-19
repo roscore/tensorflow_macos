@@ -130,26 +130,26 @@ Unlike graph mode, logging in eager mode is controlled by `TF_CPP_MIN_VLOG_LEVEL
     arch_name="$(uname -m)"
     
     if [ "${arch_name}" = "x86_64" ]; then
-        __conda_setup="$('/Users/jun/miniforge_x86_64/bin/conda' 'shell.zsh'        'hook' 2> /dev/null)"
+        __conda_setup="$('/Users/($USER)/miniforge_x86_64/bin/conda' 'shell.zsh'        'hook' 2> /dev/null)"
         if [ $? -eq 0 ]; then
             eval "$__conda_setup"
         else
-            if [ -f "/Users/jun/miniforge_x86_64/etc/profile.d/conda.sh" ];         then
-                . "/Users/jun/miniforge_x86_64/etc/profile.d/conda.sh"
+            if [ -f "/Users/($USER)/miniforge_x86_64/etc/profile.d/conda.sh" ];         then
+                . "/Users/($USER)/miniforge_x86_64/etc/profile.d/conda.sh"
             else
-                export PATH="/Users/jun/miniforge_x86_64/bin:$PATH"
+                export PATH="/Users/($USER)/miniforge_x86_64/bin:$PATH"
             fi
         fi
         unset __conda_setup
     elif [ "${arch_name}" = "arm64" ]; then
-        __conda_setup="$('/Users/jun/miniforge3/bin/conda' 'shell.zsh' 'hook'       2> /dev/null)"
+        __conda_setup="$('/Users/($USER)/miniforge3/bin/conda' 'shell.zsh' 'hook'       2> /dev/null)"
         if [ $? -eq 0 ]; then
             eval "$__conda_setup"
         else
-            if [ -f "/Users/jun/miniforge3/etc/profile.d/conda.sh" ]; then
-                . "/Users/jun/miniforge3/etc/profile.d/conda.sh"
+            if [ -f "/Users/($USER)/miniforge3/etc/profile.d/conda.sh" ]; then
+                . "/Users/($USER)/miniforge3/etc/profile.d/conda.sh"
             else
-                export PATH="/Users/jun/miniforge3/bin:$PATH"
+                export PATH="/Users/($USER)/miniforge3/bin:$PATH"
             fi
         fi
         unset __conda_setup
