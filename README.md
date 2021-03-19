@@ -123,39 +123,39 @@ Unlike graph mode, logging in eager mode is controlled by `TF_CPP_MIN_VLOG_LEVEL
 
 - If use miniforge_x86_64 for rosseta and miniforge3 for apple silicon at the same time, add the following to zshrc.
 
-'''
-# >>> conda initialize >>>
- 135 # !! Contents within this block are managed by 'conda init' !!
- 136 
- 137 arch_name="$(uname -m)"
- 138 
- 139 if [ "${arch_name}" = "x86_64" ]; then
- 140     __conda_setup="$('/Users/jun/miniforge_x86_64/bin/conda' 'shell.zsh'        'hook' 2> /dev/null)"
- 141     if [ $? -eq 0 ]; then
- 142         eval "$__conda_setup"
- 143     else
- 144         if [ -f "/Users/jun/miniforge_x86_64/etc/profile.d/conda.sh" ];         then
- 145             . "/Users/jun/miniforge_x86_64/etc/profile.d/conda.sh"
- 146         else
- 147             export PATH="/Users/jun/miniforge_x86_64/bin:$PATH"
- 148         fi
- 149     fi
- 150     unset __conda_setup
- 151 elif [ "${arch_name}" = "arm64" ]; then
- 152     __conda_setup="$('/Users/jun/miniforge3/bin/conda' 'shell.zsh' 'hook'       2> /dev/null)"
- 153     if [ $? -eq 0 ]; then
- 154         eval "$__conda_setup"
- 155     else
- 156         if [ -f "/Users/jun/miniforge3/etc/profile.d/conda.sh" ]; then
- 157             . "/Users/jun/miniforge3/etc/profile.d/conda.sh"
- 158         else
- 159             export PATH="/Users/jun/miniforge3/bin:$PATH"
- 160         fi
- 161     fi
- 162     unset __conda_setup
- 163     export GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=1
- 164     export GRPC_PYTHON_BUILD_SYSTEM_ZLIB=1
- 165 else
- 166     echo "Unknown architecture: ${arch_name}"
- 167 fi
-'''
+  ```
+  # >>> conda initialize >>>
+   135 # !! Contents within this block are managed by 'conda init' !!
+   136 
+   137 arch_name="$(uname -m)"
+   138 
+   139 if [ "${arch_name}" = "x86_64" ]; then
+   140     __conda_setup="$('/Users/jun/miniforge_x86_64/bin/conda' 'shell.zsh'        'hook' 2> /dev/null)"
+   141     if [ $? -eq 0 ]; then
+   142         eval "$__conda_setup"
+   143     else
+   144         if [ -f "/Users/jun/miniforge_x86_64/etc/profile.d/conda.sh" ];         then
+   145             . "/Users/jun/miniforge_x86_64/etc/profile.d/conda.sh"
+   146         else
+   147             export PATH="/Users/jun/miniforge_x86_64/bin:$PATH"
+   148         fi
+   149     fi
+   150     unset __conda_setup
+   151 elif [ "${arch_name}" = "arm64" ]; then
+   152     __conda_setup="$('/Users/jun/miniforge3/bin/conda' 'shell.zsh' 'hook'       2> /dev/null)"
+   153     if [ $? -eq 0 ]; then
+   154         eval "$__conda_setup"
+   155     else
+   156         if [ -f "/Users/jun/miniforge3/etc/profile.d/conda.sh" ]; then
+   157             . "/Users/jun/miniforge3/etc/profile.d/conda.sh"
+   158         else
+   159             export PATH="/Users/jun/miniforge3/bin:$PATH"
+   160         fi
+   161     fi
+   162     unset __conda_setup
+   163     export GRPC_PYTHON_BUILD_SYSTEM_OPENSSL=1
+   164     export GRPC_PYTHON_BUILD_SYSTEM_ZLIB=1
+   165 else
+   166     echo "Unknown architecture: ${arch_name}"
+   167 fi
+  ```
