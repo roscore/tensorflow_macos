@@ -123,6 +123,7 @@ Unlike graph mode, logging in eager mode is controlled by `TF_CPP_MIN_VLOG_LEVEL
 
 - If use miniforge_x86_64 for rosseta and miniforge3 for apple silicon at the same time, add the following to zshrc.
 
+'''
 # >>> conda initialize >>>
  135 # !! Contents within this block are managed by 'conda init' !!
  136 
@@ -157,4 +158,4 @@ Unlike graph mode, logging in eager mode is controlled by `TF_CPP_MIN_VLOG_LEVEL
  165 else
  166     echo "Unknown architecture: ${arch_name}"
  167 fi
-
+'''
